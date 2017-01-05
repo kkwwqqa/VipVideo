@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/css.css" />
+<!-- ZUI 标准版压缩后的 CSS 文件 -->
+<link rel="stylesheet" href="Zui/css/zui.min.css">
+<!-- ZUI Javascript 依赖 jQuery -->
+<script src="Zui/lib/jquery/jquery.js"></script>
+<!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+<script src="Zui/js/zui.min.js"></script>
+
+<script type="text/javascript">
+	function chekUser(){
+        var uName = document.getElementById("userName").value.trim();
+        
+        var patt = /^\S{3,82}$/;
+      
+        if (patt.test(uName)) {
+        	
+            return true;
+            
+        } else {
+           
+ 
+//点击按钮时显示漂浮消息
+// 创建 Messger 实例
+var msg = $.zui.messager.show('　　骚年,用户名不能为空或长度出错！　　', {placement: 'top'});
+            return false;
+        }
+            
+    }
+		function chekPwd(){
+			
+        var Pwd = document.getElementById("userPassWd").value.trim();
+        
+       var patt = /^\S{3,36}$/;
+      
+        if (patt.test(Pwd)) {
+        	
+            return true;
+            
+        } else {
+           
+
+         var msg = $.zui.messager.show('　　骚年,密码不能为空或长度出错！　　', {placement: 'top'});
+            return false;
+        }
+            
+    }
+		
+	function chekAll() {
+       if (!chekUser() || !chekPwd()) {
+       	
+            return false;
+            
+        }else{
+        	
+            return true;
+        }
+       
+    }
+	
+	/*function register(){
+		//注册延迟加载
+	var msg = $.zui.messager.show('即将跳转到用户中心！', {placement: 'center'});
+	
+	setTimeout(function going(){
+		
+		window.location.href='user.jsp';
+		
+	},3000)
+	
+	}*/
+
+</script>
+
+		<title>登录</title>
+	</head>
+<!--
+//                            _ooOoo_  
+//                           o8888888o  
+//                           88" . "88  
+//                           (| -_- |)  
+//                            O\ = /O  
+//                        ____/`---'\____  
+//                      .   ' \\| |// `.  
+//                       / \\||| : |||// \  
+//                     / _||||| -:- |||||- \  
+//                       | | \\\ - /// | |  
+//                     | \_| ''\---/'' | |  
+//                      \ .-\__ `-` ___/-. /  
+//                   ___`. .' /--.--\ `. . __  
+//                ."" '< `.___\_<|>_/___.' >'"".  
+//               | | : `- \`.;`\ _ /`;.`/ - ` : | |  
+//                 \ \ `-. \_ __\ /__ _/ .-` / /  
+//         ======`-.____`-.___\_____/___.-`____.-'======  
+//                            `=---='  
+//  
+//         .............................................  
+//                  佛祖保佑             永无BUG 
+-->	
+	<body class="login-background">
+		
+<form action="user.do" method="post" onsubmit="return chekAll()">
+	
+	<div class="container"><!--整个大容器开始-->
+	<div id="myNiceCarousel" class="carousel slide" data-ride="carousel">
+  <!-- 圆点指示器 -->
+  <ol class="carousel-indicators">
+    <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myNiceCarousel" data-slide-to="1"></li>
+    <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- 轮播项目 -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img alt="First slide" src="img/vip1.jpg">
+      <div class="carousel-caption">
+        <h3 style="color:red;">欢迎登录VIP视频解析系统</h3>
+       
+      </div>
+    </div>
+    <div class="item">
+      <img alt="Second slide" src="img/vip2.jpg">
+      <div class="carousel-caption">
+        <h3 style="color:red;">真实在线系统演示</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img alt="Third slide" src="img/vip3.jpg">
+      <div class="carousel-caption">
+        <h3 style="color:red;">期待你的光临</h3>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- 项目切换按钮 -->
+  <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
+    <span class="icon icon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
+    <span class="icon icon-chevron-right"></span>
+  </a>
+</div>	
+	    <div class="login"><!--自定义CSS开始-->
+	    
+		         	
+		         	<strong><font size="5">VIP视频解析登录</font></strong><br>
+		         	
+	        <div class="input-group">
+	        	
+                <span class="input-group-addon">
+                	
+                    <i class="icon icon-user">
+                    	
+                    </i>
+                </span>        
+                <input type="text" class="form-control" placeholder="用户名" id="userName" name="username" />
+            </div>
+
+    <br />
+
+	        <div class="input-group">
+	          	
+                <span class="input-group-addon">
+                      <i class="icon icon-key"> 
+                           	       	
+                      </i>
+                </span>
+                              
+              <input type="password" class="form-control" placeholder="密码" id="userPassWd" name="passwd" />    
+            </div>
+         
+    <br />
+ <button class="btn btn-block" type="reset">重置</button> 
+            <button class="btn btn-block btn-primary" type="submit">登录</button>
+
+</form>
+
+        	
+        	<!--<button class="btn btn-block" type="button" onclick="register()">注册</button>-->
+                   
+             
+    
+		</div><!--自定义CSS结束-->
+    </div><!--整个大容器结束-->
+	</body>
+	
+</html>

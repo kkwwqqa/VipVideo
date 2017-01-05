@@ -1,0 +1,38 @@
+.login{
+	margin: auto;
+	width: 350px;
+	text-align: center;
+	/*
+	margin-top: 110px;	
+	border:1px solid green;
+	*/
+	
+}
+.adminlogin{
+	margin-top: 100px;
+}
+
+
+.login-background{
+	background-color: #F7FBFF;
+}
+
+.user{
+	margin: auto;
+	width: auto;
+	height:auto;
+	margin-top: 20px;	
+	text-align: center;
+	/*border:2px solid red;*/
+}
+
+.add{
+	
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;	
+}
+.add-p{
+	color:red;
+	position:absolute;
+}
