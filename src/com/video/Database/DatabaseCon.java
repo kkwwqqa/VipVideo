@@ -14,7 +14,7 @@ public class DatabaseCon {
 	private String DRIVER_CLASS = "com.mysql.jdbc.Driver";
 	private String DADABASE_URL="jdbc:mysql://localhost:3306/video";
 	private String DADABASE_USER = "root";
-	private String DADABASE_PASSWORD = "";
+	private String DADABASE_PASSWORD = "root";
 
 
 	
