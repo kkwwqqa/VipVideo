@@ -8,8 +8,8 @@
 <br>系统存在越权删除用户的BUG,留给需要学习的人去修复咯~
 <br>在线演示
 <br>友情提示：请不要用手机登陆后端！！！！！！！！！！！！！！！！！
-<br>后端（账号密码都是admin）：http://vip2.ximcx.cn/Video/admin/login.html
-<br>前端（账号密码需要登录后端添加）：http://vip2.ximcx.cn/Video/login.html
+<br>后端（账号密码都是admin）：http://localhost:8080/Video/admin/login.html
+<br>前端（账号密码需要登录后端添加）：http://localhost:8080/Video/login.html
 
 ![Alt text](https://i.loli.net/2017/10/23/59eda161149b1.jpg)
 ![Alt text](https://i.loli.net/2017/10/23/59eda18fcbe2d.jpg)
